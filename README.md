@@ -1,6 +1,11 @@
-Implement a binary search function that, given a sorted list and an element to look for, returns the index of the element in the list or -1 if the element is not there.
+# Binary Search
 
-Use the template in code.js. The tests in code.test.js will be run automatically every time you push to Github; if they pass you are done.
+Implement a binary search function that, given a sorted list and an element to
+look for, returns the index of the element in the list or -1 if the element is
+not there.
+
+Use the template in `code.js`. The tests in `code.test.js` will be run
+automatically every time you push to Github; if they pass you are done.
 
 I used the template provided in this link to build my binary search function: https://www.geeksforgeeks.org/binary-search-in-javascript/ I used this link to help me discover a recursion problem I was having with my return value: https://stackoverflow.com/questions/69868619/recursion-in-javascript-question-how-is-the-position-of-console-log-here-affect
 
