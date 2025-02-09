@@ -3,8 +3,8 @@ function binarySearch(list, element) {
     var start = 0;
     if (list.length == 0) {return -1;}
     if (list.length == 1) {
-        if (list[0] = element) {return 0;}
-        return -1;
+        if (list[0] == element) {return 0;}
+        else {return -1;}
     }
     var end = list.length -1;
     function recursiveSearch(start, end) {
