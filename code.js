@@ -21,6 +21,7 @@ function binarySearch(list, element) {
         }
     }
     function lookLeft(lookArray, currentIndex) {
+        if (currentIndex = 0) {return;}
         if (lookArray[currentIndex] == lookArray[currentIndex -1]) {
             returnValue = currentIndex-1;
             lookLeft(lookArray, currentIndex-1);
