@@ -12,7 +12,6 @@ function binarySearch(list, element) {
         if (list[mid] === element) {
             returnValue = mid;
             lookLeft(list,mid);
-            //recursiveSearch(start, mid - 1)
             return;}
         if (list[mid] > element) {
             recursiveSearch(start, mid - 1)
