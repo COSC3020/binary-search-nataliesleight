@@ -11,7 +11,10 @@ function binarySearch(list, element) {
         if (start > end) { 
             returnValue = -1;
             return }
-        if (end == 0) return;    
+        if (end == 0) {
+            if (list[0] = element) {returnValue = 0;}
+            else {returnValue = -1;}
+        }    
         var mid = Math.floor((start + end)/2)
         if (list[mid] === element) {
             returnValue = mid;
