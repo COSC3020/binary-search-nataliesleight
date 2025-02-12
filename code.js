@@ -1,40 +1,33 @@
 function binarySearch(list, element) {
-    var returnValue = -1;
-    var start = 0;
-    if (list.length == 0) {return -1;}
-    if (list.length == 1) {
-        if (list[0] == element) {return 0;}
-        else {return -1;}
+    var tmp = -1;
+    var mid = Math.floor((list.length)/2);
+    if (list.length==1) {
+        if (list[0] == element) {tmp = 0;}}
+    else if (element < list[mid]) {
+        binarySearch(list.slice(0,mid), element); }
+    else if (element > list[mid]) {
+        binarySearch(list.slice(mid,list.length), element); }
+    else if (element == list[mid]) {
+        var tmp = mid;
+       /* for (var i = mid -1; i >= 0; i--) {
+            if (element == list[i]) {
+                tmp = i;
+            }
+        }*/
     }
-    var end = list.length -1;
-    function recursiveSearch(start, end) {
-        if (start > end) { 
-            returnValue = -1;
-            return }
-        if (end == 0) {
-            if (list[0] = element) {returnValue = 0;}
-            else {returnValue = -1;}
-        }    
-        var mid = Math.floor((start + end)/2)
-        if (list[mid] === element) {
-            returnValue = mid;
-            lookLeft(list,mid);
-            return;}
-        if (list[mid] > element) {
-            recursiveSearch(start, mid - 1)
-        }
-        else {
-            recursiveSearch(mid + 1, end)
-        }
-    }
-    function lookLeft(lookArray, currentIndex) {
-        if (currentIndex == 0) {return;}
-        if (lookArray[currentIndex] == lookArray[currentIndex -1]) {
-            returnValue = currentIndex-1;
-            lookLeft(lookArray, currentIndex-1);
-        }
-        else {return;}
-    }
-    var functionReturn = recursiveSearch(start, end)
-    return returnValue;
+    // else {return;}
+    return tmp;
 }
+
+
+
+var arrSearch2 = [0,1,1,2,3,4,5,5,5,5,5,6,7,8,9,10];
+var arrSearch = [3, 3, 3, 3, 3, 3, 3, 3,3 ,3 , 3,3, 3, 3, 3, 3];
+var arrSearch3= [0];
+var isIn = 20;
+var isIn2 = 20;
+var isNot = 100;
+
+console.log(binarySearch(arrSearch2, 0))
+console.log(binarySearch(arrSearch2, 1))
+console.log(binarySearch(arrSearch2, 9))
